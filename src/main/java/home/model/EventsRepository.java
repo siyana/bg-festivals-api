@@ -1,4 +1,4 @@
-package home;
+package home.model;
 
 import java.util.List;
 
@@ -7,7 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EventsRepository extends CrudRepository<Event, Long> {
-	
-	// will list all events
 	public List<Event> findAll();	
 }

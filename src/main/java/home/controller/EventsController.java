@@ -1,9 +1,9 @@
-package home;
+package home.controller;
 
-import java.util.Date;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/events")
+import home.model.Event;
+import home.model.EventsRepository;
+
+@RestController()
+@RequestMapping("/events")
 public class EventsController {
 
 	@Autowired
@@ -30,10 +34,10 @@ public class EventsController {
 		try {
 			events = eventsRepository.findAll();
 		} catch (Exception e) {
-			return null;
+			e.printStackTrace();
 		}
 		return events;
-		}
+	}
 
 	/**
 	 * @category Crud operations

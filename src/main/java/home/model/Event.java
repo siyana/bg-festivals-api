@@ -1,4 +1,4 @@
-package home;
+package home.model;
 
 import java.sql.Timestamp;
 
@@ -15,6 +15,7 @@ public class Event {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "event_id")
 	private long id;
 
 	@Column(nullable = false)
