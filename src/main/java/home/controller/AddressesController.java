@@ -11,10 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import home.model.Address;
 import home.model.AddressesRepository;
 import home.model.City;
+import home.services.AddressService;
 
 @RestController()
 @RequestMapping("/addresses")
 public class AddressesController {
+	@Autowired
+	private AddressService service;
+	
 	@Autowired
 	private AddressesRepository repository;
 
@@ -46,16 +50,7 @@ public class AddressesController {
 	@RequestMapping(method = RequestMethod.POST, value = "/address")
 	@ResponseBody
 	public String create(String street, String zip, City city) {
-
-		try {
-			Address address = new Address(street, zip, city);
-			repository.save(address);
-				
-		} catch (Exception ex) {
-			return "Error creating city: " + ex.toString();
-		}
-
-		return "Address successfully created";
+		return service.saveAddress(street, zip, city);
 	}
 
 }
