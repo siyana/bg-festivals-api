@@ -12,5 +12,5 @@ public interface AddressesRepository extends CrudRepository<Address, Long> {
 	 * @param cityId
 	 * @return List all addresses in a city with given id
 	 */
-	public List<Address> findByCity_Id(Long cityId);
+	public List<Address> findByCity_Id(Long id);
 }

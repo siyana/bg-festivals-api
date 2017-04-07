@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "city")
 public class City {
@@ -25,7 +27,8 @@ public class City {
 	@Column
 	private String country;
 	
-	@OneToMany(mappedBy="city", cascade={CascadeType.REMOVE})
+	@OneToMany(mappedBy="city")
+	@JsonManagedReference
 	private List<Address> addresses;
 	
 	public City() {

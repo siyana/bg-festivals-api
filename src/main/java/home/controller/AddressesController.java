@@ -32,10 +32,10 @@ public class AddressesController {
 
 	@RequestMapping(method = RequestMethod.GET, value = "/addresses_by_city")
 	@ResponseBody
-	public List<Address> addressesByCity(Long cityId) {
+	public List<Address> addressesByCity(Long id) {
 		List<Address> addresses = null;
 		try {
-			addresses = repository.findByCity_Id(cityId);
+			addresses = repository.findByCity_Id(id);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,7 +49,8 @@ public class AddressesController {
 
 		try {
 			Address address = new Address(street, zip, city);
-			repository.save(address);		
+			repository.save(address);
+				
 		} catch (Exception ex) {
 			return "Error creating city: " + ex.toString();
 		}
