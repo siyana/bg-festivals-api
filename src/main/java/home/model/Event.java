@@ -65,41 +65,41 @@ public class Event {
 		this.endDate = endDate;
 	}
 
-	public String getTitle() {
-		return title;
-	}
+//	public String getTitle() {
+//		return title;
+//	}
 
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	public String getEventDescription() {
-		return eventDescription;
-	}
+//	public String getEventDescription() {
+//		return eventDescription;
+//	}
 
 	public void setEventDescription(String eventDescription) {
 		this.eventDescription = eventDescription;
 	}
 
-	public Double getRating() {
-		return rating;
-	}
+//	public Double getRating() {
+//		return rating;
+//	}
 
 	public void setRating(Double rating) {
 		this.rating = rating;
 	}
 
-	public Timestamp getStartDate() {
-		return startDate;
-	}
+//	public Timestamp getStartDate() {
+//		return startDate;
+//	}
 
 	public void setStartDate(Timestamp startDate) {
 		this.startDate = startDate;
 	}
 
-	public Timestamp getEndDate() {
-		return endDate;
-	}
+//	public Timestamp getEndDate() {
+//		return endDate;
+//	}
 
 	public void setEndDate(Timestamp endDate) {
 		this.endDate = endDate;

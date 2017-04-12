@@ -47,25 +47,25 @@ public class Address {
 		return street;
 	}
 
-	public void setStreet(String street) {
-		this.street = street;
-	}
+//	public void setStreet(String street) {
+//		this.street = street;
+//	}
 
 	public String getZip() {
 		return zip;
 	}
 
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
+//	public void setZip(String zip) {
+//		this.zip = zip;
+//	}
 
 	public City getCity() {
 		return city;
 	}
 
-	public void setCity(City city) {
-		this.city = city;
-	}
+//	public void setCity(City city) {
+//		this.city = city;
+//	}
 
 	public Long getId() {
 		return id;
